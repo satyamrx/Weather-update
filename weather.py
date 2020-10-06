@@ -1,5 +1,5 @@
-import requests
-from bs4 import BeautifulSoup
+import requests 
+from bs4 import BeautifulSoup   
 from win10toast import ToastNotifier 
 # create an object to ToastNotifier class
 
@@ -7,7 +7,8 @@ n = ToastNotifier()
 
 # url get link
 def getdata(url):
-    r=requests.get(url)
+    s=requests.get(url)
+    r=s
     return r.text
 htmldata=getdata("https://weather.com/en-IN/weather/today/l/25.59,85.14?par=google&temp=c/")
 soup = BeautifulSoup(htmldata, 'html.parser')
